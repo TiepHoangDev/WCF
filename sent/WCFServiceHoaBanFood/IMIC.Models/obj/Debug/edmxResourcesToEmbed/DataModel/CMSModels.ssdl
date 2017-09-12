@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_HOABANFOOD_VER2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ANHSANPHAM">
+    <Key>
+      <PropertyRef Name="MAANH" />
+    </Key>
+    <Property Name="MAANH" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MASP" Type="uniqueidentifier" />
+    <Property Name="URL" Type="text" />
+    <Property Name="ANHSP" Type="image" />
+    <Property Name="ISPENDING" Type="bit" />
+    <Property Name="ISPUBLISH" Type="bit" />
+    <Property Name="ISDELETE" Type="bit" />
+  </EntityType>
+  <EntityType Name="BAIVETSANPHAM">
+    <Key>
+      <PropertyRef Name="MABV" />
+    </Key>
+    <Property Name="MABV" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MASP" Type="uniqueidentifier" />
+    <Property Name="TIEUDE" Type="nvarchar" MaxLength="100" />
+    <Property Name="NOIDUNG" Type="ntext" />
+    <Property Name="ISPENDING" Type="bit" />
+    <Property Name="ISPUBLISH" Type="bit" />
+    <Property Name="ISDELETE" Type="bit" />
+  </EntityType>
+  <EntityType Name="BINHLUAN">
+    <Key>
+      <PropertyRef Name="MABL" />
+    </Key>
+    <Property Name="MABL" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MANV" Type="uniqueidentifier" />
+    <Property Name="MASP" Type="uniqueidentifier" />
+    <Property Name="NOIDUNG" Type="text" />
+    <Property Name="NGAYBINHLUAN" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CHITIETDATHANG">
+    <Key>
+      <PropertyRef Name="MADH" />
+      <PropertyRef Name="MASP" />
+    </Key>
+    <Property Name="MADH" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MASP" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SOLUONG" Type="int" />
+  </EntityType>
+  <EntityType Name="CHITIETKHUYENMAI">
+    <Key>
+      <PropertyRef Name="MALOAIKM" />
+      <PropertyRef Name="MASP" />
+    </Key>
+    <Property Name="MALOAIKM" Type="int" Nullable="false" />
+    <Property Name="MASP" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NGAYBATDAUKM" Type="datetime" />
+    <Property Name="NGAYKETTHUCKM" Type="datetime" />
+    <Property Name="PHANTRAM" Type="int" />
+  </EntityType>
+  <EntityType Name="DANHGIA">
+    <Key>
+      <PropertyRef Name="MASP" />
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MASP" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MANV" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NGAYBL" Type="datetime" />
+    <Property Name="NOIDUNG" Type="text" />
+    <Property Name="SOSAO" Type="int" />
+  </EntityType>
+  <EntityType Name="DANHMUCSANPHAM">
+    <Key>
+      <PropertyRef Name="MADMSP" />
+    </Key>
+    <Property Name="MADMSP" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TENDMSP" Type="nvarchar" MaxLength="200" />
+    <Property Name="ANHDMSP" Type="image" />
+    <Property Name="ISDELETE" Type="bit" />
+  </EntityType>
+  <EntityType Name="DONDATHANG">
+    <Key>
+      <PropertyRef Name="MADH" />
+    </Key>
+    <Property Name="MADH" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MANV" Type="uniqueidentifier" />
+    <Property Name="TRANGTHAI" Type="int" />
+    <Property Name="DIACHIGIAO" Type="text" />
+    <Property Name="NGAYDAT" Type="datetime" />
+    <Property Name="NGAYGIAO" Type="datetime" />
+    <Property Name="MOTA" Type="text" />
+  </EntityType>
+  <EntityType Name="LOAIKHUYENMAI">
+    <Key>
+      <PropertyRef Name="MALOAIKM" />
+    </Key>
+    <Property Name="MALOAIKM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENLOAIKM" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="LOAINHANVIEN">
+    <Key>
+      <PropertyRef Name="MALOAINV" />
+    </Key>
+    <Property Name="MALOAINV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TENLOAINV" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MANV" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TENNV" Type="nvarchar" MaxLength="100" />
+    <Property Name="TENDN" Type="varchar" MaxLength="20" />
+    <Property Name="MATKHAU" Type="varchar" MaxLength="20" />
+    <Property Name="DIACHI" Type="text" />
+    <Property Name="NGAYSINH" Type="datetime" />
+    <Property Name="SODT" Type="varchar" MaxLength="20" />
+    <Property Name="GIOITINH" Type="nvarchar" MaxLength="5" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="MALOAINV" Type="int" />
+  </EntityType>
+  <EntityType Name="SANPHAM">
+    <Key>
+      <PropertyRef Name="MASP" />
+    </Key>
+    <Property Name="MASP" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MADMSP" Type="uniqueidentifier" />
+    <Property Name="TENSP" Type="nvarchar" MaxLength="200" />
+    <Property Name="GIA" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ANHLONSP" Type="image" />
+    <Property Name="DONVISP" Type="nvarchar" MaxLength="100" />
+    <Property Name="SOLUONG" Type="int" />
+    <Property Name="LUOTVIEW" Type="int" />
+    <Property Name="LUOTTHICH" Type="int" />
+    <Property Name="THONGTIN" Type="ntext" />
+    <Property Name="THONGBAO" Type="ntext" />
+    <Property Name="ISPENDING" Type="bit" />
+    <Property Name="ISPUBLISH" Type="bit" />
+    <Property Name="ISDELETE" Type="bit" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="THICHSANPHAM">
+    <Key>
+      <PropertyRef Name="MASP" />
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MASP" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MANV" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VIDEOSANPHAM">
+    <Key>
+      <PropertyRef Name="MAVD" />
+    </Key>
+    <Property Name="MAVD" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MASP" Type="uniqueidentifier" />
+    <Property Name="URL" Type="text" />
+    <Property Name="ISPENDING" Type="bit" />
+    <Property Name="ISPUBLISH" Type="bit" />
+    <Property Name="ISDELETE" Type="bit" />
+  </EntityType>
+  <Association Name="FK_ANHSANPHAM_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
+    <End Role="ANHSANPHAM" Type="Self.ANHSANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="ANHSANPHAM">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BAIVETSANPHAM_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
+    <End Role="BAIVETSANPHAM" Type="Self.BAIVETSANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="BAIVETSANPHAM">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BINHLUAN_MANV">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="BINHLUAN" Type="Self.BINHLUAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="BINHLUAN">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BINHLUAN_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
+    <End Role="BINHLUAN" Type="Self.BINHLUAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="BINHLUAN">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETDONHANG_MADH">
+    <End Role="DONDATHANG" Type="Self.DONDATHANG" Multiplicity="1" />
+    <End Role="CHITIETDATHANG" Type="Self.CHITIETDATHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DONDATHANG">
+        <PropertyRef Name="MADH" />
+      </Principal>
+      <Dependent Role="CHITIETDATHANG">
+        <PropertyRef Name="MADH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETDONHANG_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="1" />
+    <End Role="CHITIETDATHANG" Type="Self.CHITIETDATHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="CHITIETDATHANG">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETKHUYENMA_MALOAIKM">
+    <End Role="LOAIKHUYENMAI" Type="Self.LOAIKHUYENMAI" Multiplicity="1" />
+    <End Role="CHITIETKHUYENMAI" Type="Self.CHITIETKHUYENMAI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAIKHUYENMAI">
+        <PropertyRef Name="MALOAIKM" />
+      </Principal>
+      <Dependent Role="CHITIETKHUYENMAI">
+        <PropertyRef Name="MALOAIKM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETKHUYENMA_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="1" />
+    <End Role="CHITIETKHUYENMAI" Type="Self.CHITIETKHUYENMAI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="CHITIETKHUYENMAI">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DANHGIA_MANV">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
+    <End Role="DANHGIA" Type="Self.DANHGIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="DANHGIA">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DANHGIA_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="1" />
+    <End Role="DANHGIA" Type="Self.DANHGIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="DANHGIA">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NHANVIEN_MALOAINV">
+    <End Role="LOAINHANVIEN" Type="Self.LOAINHANVIEN" Multiplicity="0..1" />
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAINHANVIEN">
+        <PropertyRef Name="MALOAINV" />
+      </Principal>
+      <Dependent Role="NHANVIEN">
+        <PropertyRef Name="MALOAINV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SANPHAM_MADMSP">
+    <End Role="DANHMUCSANPHAM" Type="Self.DANHMUCSANPHAM" Multiplicity="0..1" />
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DANHMUCSANPHAM">
+        <PropertyRef Name="MADMSP" />
+      </Principal>
+      <Dependent Role="SANPHAM">
+        <PropertyRef Name="MADMSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_THICHSANPHAM_MANV">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
+    <End Role="THICHSANPHAM" Type="Self.THICHSANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="THICHSANPHAM">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_THICHSANPHAM_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="1" />
+    <End Role="THICHSANPHAM" Type="Self.THICHSANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="THICHSANPHAM">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VIDEOSANPHAM_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
+    <End Role="VIDEOSANPHAM" Type="Self.VIDEOSANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="VIDEOSANPHAM">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="SP_ALL_LOAIKM_BY_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MALOAIKM" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_ALL_ANH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ALL_ANH_SP_BY_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MASP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_ALL_BAIVIET" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ALL_BINHLUAN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ALL_BV_SP_BY_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MASP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_ALL_CHITIETKHUYENMAI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ALL_CTDH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ALL_DANHGIA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ALL_DDH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ALL_DMSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ALL_DMSP_DEMO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ALL_KHUYENMAI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ALL_LOAINHANVIEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ALL_NHANVIEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ALL_NHANVIEN_BY_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MANV" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_ALL_SANPHAM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ALL_SANPHAM_DUOC_THICH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MASP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_ALL_SP_DMSP_BY_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MADMSP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_ALL_SP_NHANVIEN_THICH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MANV" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_ALL_THICHSANPHAM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ALL_VD_SP_BY_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MASP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_ALL_VIDEO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GET_ANH_BY_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MAANH" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_BV_BY_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MABV" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_CHITIETKHUYENMAI_BY_MASP_MAKM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MALOAIKM" Type="int" Mode="In" />
+    <Parameter Name="MASP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_DMSP_BY_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MADMSP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_LOAINHANVIEN_BY_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MALOAINV" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_SANPHAM_BY_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MASP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GET_VIDEO_BY_ID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MAVD" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_SUA_ANH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MAANH" Type="varchar" Mode="In" />
+    <Parameter Name="MASP" Type="varchar" Mode="In" />
+    <Parameter Name="URL" Type="text" Mode="In" />
+    <Parameter Name="ANHSP" Type="image" Mode="In" />
+    <Parameter Name="ISPENDING" Type="bit" Mode="In" />
+    <Parameter Name="ISPUBLISH" Type="bit" Mode="In" />
+    <Parameter Name="ISDELETE" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SP_SUA_BAIVIET" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MABV" Type="varchar" Mode="In" />
+    <Parameter Name="MASP" Type="varchar" Mode="In" />
+    <Parameter Name="TIEUDE" Type="nvarchar" Mode="In" />
+    <Parameter Name="NOIDUNG" Type="ntext" Mode="In" />
+    <Parameter Name="ISPENDING" Type="bit" Mode="In" />
+    <Parameter Name="ISPUBLISH" Type="bit" Mode="In" />
+    <Parameter Name="ISDELETE" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SP_SUA_DANHMUC_SANPHAM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MADMSP" Type="varchar" Mode="In" />
+    <Parameter Name="TENDMSP" Type="nvarchar" Mode="In" />
+    <Parameter Name="ANHDMSP" Type="image" Mode="In" />
+    <Parameter Name="ISDELETE" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SP_SUA_SANPHAM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MASP" Type="varchar" Mode="In" />
+    <Parameter Name="MADMSP" Type="varchar" Mode="In" />
+    <Parameter Name="TENSP" Type="nvarchar" Mode="In" />
+    <Parameter Name="GIA" Type="decimal" Mode="In" />
+    <Parameter Name="ANHLONSP" Type="image" Mode="In" />
+    <Parameter Name="DONVISP" Type="nvarchar" Mode="In" />
+    <Parameter Name="SOLUONG" Type="int" Mode="In" />
+    <Parameter Name="LUOTVIEW" Type="int" Mode="In" />
+    <Parameter Name="LUOTTHICH" Type="int" Mode="In" />
+    <Parameter Name="THONGTIN" Type="ntext" Mode="In" />
+    <Parameter Name="THONGBAO" Type="ntext" Mode="In" />
+    <Parameter Name="ISPENDING" Type="bit" Mode="In" />
+    <Parameter Name="ISPUBLISH" Type="bit" Mode="In" />
+    <Parameter Name="ISDELETE" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SP_SUA_VIDEO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MAVD" Type="varchar" Mode="In" />
+    <Parameter Name="MASP" Type="varchar" Mode="In" />
+    <Parameter Name="URL" Type="text" Mode="In" />
+    <Parameter Name="ISPENDING" Type="bit" Mode="In" />
+    <Parameter Name="ISPUBLISH" Type="bit" Mode="In" />
+    <Parameter Name="ISDELETE" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SP_THEM_ANH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MASP" Type="varchar" Mode="In" />
+    <Parameter Name="URL" Type="text" Mode="In" />
+    <Parameter Name="ANHSP" Type="image" Mode="In" />
+    <Parameter Name="ISPENDING" Type="bit" Mode="In" />
+    <Parameter Name="ISPUBLISH" Type="bit" Mode="In" />
+    <Parameter Name="ISDELETE" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SP_THEM_BAIVIET" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MASP" Type="varchar" Mode="In" />
+    <Parameter Name="TIEUDE" Type="nvarchar" Mode="In" />
+    <Parameter Name="NOIDUNG" Type="ntext" Mode="In" />
+    <Parameter Name="ISPENDING" Type="bit" Mode="In" />
+    <Parameter Name="ISPUBLISH" Type="bit" Mode="In" />
+    <Parameter Name="ISDELETE" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SP_THEM_DANHMUC_SANPHAM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TENDMSP" Type="nvarchar" Mode="In" />
+    <Parameter Name="ANHDMSP" Type="image" Mode="In" />
+    <Parameter Name="ISDELETE" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SP_THEM_SANPHAM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MADMSP" Type="varchar" Mode="In" />
+    <Parameter Name="TENSP" Type="nvarchar" Mode="In" />
+    <Parameter Name="GIA" Type="decimal" Mode="In" />
+    <Parameter Name="ANHLONSP" Type="image" Mode="In" />
+    <Parameter Name="DONVISP" Type="nvarchar" Mode="In" />
+    <Parameter Name="SOLUONG" Type="int" Mode="In" />
+    <Parameter Name="LUOTVIEW" Type="int" Mode="In" />
+    <Parameter Name="LUOTTHICH" Type="int" Mode="In" />
+    <Parameter Name="THONGTIN" Type="ntext" Mode="In" />
+    <Parameter Name="THONGBAO" Type="ntext" Mode="In" />
+    <Parameter Name="ISPENDING" Type="bit" Mode="In" />
+    <Parameter Name="ISPUBLISH" Type="bit" Mode="In" />
+    <Parameter Name="ISDELETE" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SP_THEM_VIDEO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MASP" Type="varchar" Mode="In" />
+    <Parameter Name="URL" Type="text" Mode="In" />
+    <Parameter Name="ISPENDING" Type="bit" Mode="In" />
+    <Parameter Name="ISPUBLISH" Type="bit" Mode="In" />
+    <Parameter Name="ISDELETE" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_XOA_ANH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MAANH" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_XOA_BAIVIET" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MABV" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_XOA_DANHMUC_SANPHAM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MADMSP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_XOA_SANPHAM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MASP" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_XOA_VIDEO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MAVD" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="DB_HOABANFOOD_VER2ModelStoreContainer">
+    <EntitySet Name="ANHSANPHAM" EntityType="Self.ANHSANPHAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BAIVETSANPHAM" EntityType="Self.BAIVETSANPHAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BINHLUAN" EntityType="Self.BINHLUAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHITIETDATHANG" EntityType="Self.CHITIETDATHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHITIETKHUYENMAI" EntityType="Self.CHITIETKHUYENMAI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DANHGIA" EntityType="Self.DANHGIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DANHMUCSANPHAM" EntityType="Self.DANHMUCSANPHAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DONDATHANG" EntityType="Self.DONDATHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAIKHUYENMAI" EntityType="Self.LOAIKHUYENMAI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAINHANVIEN" EntityType="Self.LOAINHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SANPHAM" EntityType="Self.SANPHAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THICHSANPHAM" EntityType="Self.THICHSANPHAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VIDEOSANPHAM" EntityType="Self.VIDEOSANPHAM" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ANHSANPHAM_MASP" Association="Self.FK_ANHSANPHAM_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="ANHSANPHAM" EntitySet="ANHSANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BAIVETSANPHAM_MASP" Association="Self.FK_BAIVETSANPHAM_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="BAIVETSANPHAM" EntitySet="BAIVETSANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BINHLUAN_MANV" Association="Self.FK_BINHLUAN_MANV">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="BINHLUAN" EntitySet="BINHLUAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BINHLUAN_MASP" Association="Self.FK_BINHLUAN_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="BINHLUAN" EntitySet="BINHLUAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETDONHANG_MADH" Association="Self.FK_CHITIETDONHANG_MADH">
+      <End Role="DONDATHANG" EntitySet="DONDATHANG" />
+      <End Role="CHITIETDATHANG" EntitySet="CHITIETDATHANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETDONHANG_MASP" Association="Self.FK_CHITIETDONHANG_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="CHITIETDATHANG" EntitySet="CHITIETDATHANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETKHUYENMA_MALOAIKM" Association="Self.FK_CHITIETKHUYENMA_MALOAIKM">
+      <End Role="LOAIKHUYENMAI" EntitySet="LOAIKHUYENMAI" />
+      <End Role="CHITIETKHUYENMAI" EntitySet="CHITIETKHUYENMAI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETKHUYENMA_MASP" Association="Self.FK_CHITIETKHUYENMA_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="CHITIETKHUYENMAI" EntitySet="CHITIETKHUYENMAI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DANHGIA_MANV" Association="Self.FK_DANHGIA_MANV">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="DANHGIA" EntitySet="DANHGIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DANHGIA_MASP" Association="Self.FK_DANHGIA_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="DANHGIA" EntitySet="DANHGIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NHANVIEN_MALOAINV" Association="Self.FK_NHANVIEN_MALOAINV">
+      <End Role="LOAINHANVIEN" EntitySet="LOAINHANVIEN" />
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SANPHAM_MADMSP" Association="Self.FK_SANPHAM_MADMSP">
+      <End Role="DANHMUCSANPHAM" EntitySet="DANHMUCSANPHAM" />
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_THICHSANPHAM_MANV" Association="Self.FK_THICHSANPHAM_MANV">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="THICHSANPHAM" EntitySet="THICHSANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_THICHSANPHAM_MASP" Association="Self.FK_THICHSANPHAM_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="THICHSANPHAM" EntitySet="THICHSANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VIDEOSANPHAM_MASP" Association="Self.FK_VIDEOSANPHAM_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="VIDEOSANPHAM" EntitySet="VIDEOSANPHAM" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,18 @@
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.EntityObjects\bin\Debug\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.EntityObjects\bin\Debug\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.EntityObjects\obj\Debug\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.EntityObjects\obj\Debug\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.EntityObjects\bin\Debug\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.EntityObjects\bin\Debug\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.EntityObjects\obj\Debug\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.EntityObjects\obj\Debug\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.EntityObjects\obj\Debug\IMIC.EntityObjects.csprojResolveAssemblyReference.cache
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.EntityObjects\bin\Debug\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.EntityObjects\bin\Debug\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.EntityObjects\obj\Debug\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.EntityObjects\obj\Debug\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.EntityObjects\bin\Debug\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.EntityObjects\bin\Debug\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.EntityObjects\obj\Debug\IMIC.EntityObjects.csprojResolveAssemblyReference.cache
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.EntityObjects\obj\Debug\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.EntityObjects\obj\Debug\IMIC.EntityObjects.pdb

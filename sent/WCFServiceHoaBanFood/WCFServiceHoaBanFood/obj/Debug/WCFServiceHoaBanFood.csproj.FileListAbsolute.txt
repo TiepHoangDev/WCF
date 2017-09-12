@@ -1,0 +1,72 @@
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\WCFServiceHoaBanFood.dll.config
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\WCFServiceHoaBanFood.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\WCFServiceHoaBanFood.pdb
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.SqlServer.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Controllers.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\Newtonsoft.Json.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Models.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Controllers.pdb
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.xml
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.SqlServer.xml
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\Newtonsoft.Json.xml
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Models.pdb
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\obj\Debug\WCFServiceHoaBanFood.csprojResolveAssemblyReference.cache
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\obj\Debug\WCFServiceHoaBanFood.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\WCFServiceHoaBanFood\obj\Debug\WCFServiceHoaBanFood.pdb
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\WCFServiceHoaBanFood.dll.config
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\WCFServiceHoaBanFood.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\WCFServiceHoaBanFood.pdb
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.SqlServer.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Controllers.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\Newtonsoft.Json.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Models.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Controllers.pdb
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.xml
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.SqlServer.xml
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\Newtonsoft.Json.xml
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Models.pdb
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\obj\Debug\WCFServiceHoaBanFood.csprojResolveAssemblyReference.cache
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\obj\Debug\WCFServiceHoaBanFood.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\WCFServiceHoaBanFood\obj\Debug\WCFServiceHoaBanFood.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\WCFServiceHoaBanFood.dll.config
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\WCFServiceHoaBanFood.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\WCFServiceHoaBanFood.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.SqlServer.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Controllers.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\Newtonsoft.Json.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Models.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Controllers.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.xml
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.SqlServer.xml
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\Newtonsoft.Json.xml
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Models.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\obj\Debug\WCFServiceHoaBanFood.csprojResolveAssemblyReference.cache
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\obj\Debug\WCFServiceHoaBanFood.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\obj\Debug\WCFServiceHoaBanFood.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\WCFServiceHoaBanFood.dll.config
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\WCFServiceHoaBanFood.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\WCFServiceHoaBanFood.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.SqlServer.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Controllers.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\Newtonsoft.Json.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Models.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Controllers.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.xml
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\EntityFramework.SqlServer.xml
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\Newtonsoft.Json.xml
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\bin\IMIC.Models.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\obj\Debug\WCFServiceHoaBanFood.csprojResolveAssemblyReference.cache
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\obj\Debug\WCFServiceHoaBanFood.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\WCFServiceHoaBanFood\obj\Debug\WCFServiceHoaBanFood.pdb

@@ -1,0 +1,864 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_HOABANFOOD_VER2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ANHSANPHAM">
+    <Key>
+      <PropertyRef Name="MAANH" />
+    </Key>
+    <Property Name="MAANH" Type="Guid" Nullable="false" />
+    <Property Name="MASP" Type="Guid" />
+    <Property Name="URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ANHSP" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ISPENDING" Type="Boolean" />
+    <Property Name="ISPUBLISH" Type="Boolean" />
+    <Property Name="ISDELETE" Type="Boolean" />
+    <NavigationProperty Name="SANPHAM" Relationship="Self.FK_ANHSANPHAM_MASP" FromRole="ANHSANPHAM" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="BAIVETSANPHAM">
+    <Key>
+      <PropertyRef Name="MABV" />
+    </Key>
+    <Property Name="MABV" Type="Guid" Nullable="false" />
+    <Property Name="MASP" Type="Guid" />
+    <Property Name="TIEUDE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NOIDUNG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ISPENDING" Type="Boolean" />
+    <Property Name="ISPUBLISH" Type="Boolean" />
+    <Property Name="ISDELETE" Type="Boolean" />
+    <NavigationProperty Name="SANPHAM" Relationship="Self.FK_BAIVETSANPHAM_MASP" FromRole="BAIVETSANPHAM" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="BINHLUAN">
+    <Key>
+      <PropertyRef Name="MABL" />
+    </Key>
+    <Property Name="MABL" Type="Guid" Nullable="false" />
+    <Property Name="MANV" Type="Guid" />
+    <Property Name="MASP" Type="Guid" />
+    <Property Name="NOIDUNG" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NGAYBINHLUAN" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="NHANVIEN" Relationship="Self.FK_BINHLUAN_MANV" FromRole="BINHLUAN" ToRole="NHANVIEN" />
+    <NavigationProperty Name="SANPHAM" Relationship="Self.FK_BINHLUAN_MASP" FromRole="BINHLUAN" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="CHITIETDATHANG">
+    <Key>
+      <PropertyRef Name="MADH" />
+      <PropertyRef Name="MASP" />
+    </Key>
+    <Property Name="MADH" Type="Guid" Nullable="false" />
+    <Property Name="MASP" Type="Guid" Nullable="false" />
+    <Property Name="SOLUONG" Type="Int32" />
+    <NavigationProperty Name="DONDATHANG" Relationship="Self.FK_CHITIETDONHANG_MADH" FromRole="CHITIETDATHANG" ToRole="DONDATHANG" />
+    <NavigationProperty Name="SANPHAM" Relationship="Self.FK_CHITIETDONHANG_MASP" FromRole="CHITIETDATHANG" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="CHITIETKHUYENMAI">
+    <Key>
+      <PropertyRef Name="MALOAIKM" />
+      <PropertyRef Name="MASP" />
+    </Key>
+    <Property Name="MALOAIKM" Type="Int32" Nullable="false" />
+    <Property Name="MASP" Type="Guid" Nullable="false" />
+    <Property Name="NGAYBATDAUKM" Type="DateTime" Precision="3" />
+    <Property Name="NGAYKETTHUCKM" Type="DateTime" Precision="3" />
+    <Property Name="PHANTRAM" Type="Int32" />
+    <NavigationProperty Name="LOAIKHUYENMAI" Relationship="Self.FK_CHITIETKHUYENMA_MALOAIKM" FromRole="CHITIETKHUYENMAI" ToRole="LOAIKHUYENMAI" />
+    <NavigationProperty Name="SANPHAM" Relationship="Self.FK_CHITIETKHUYENMA_MASP" FromRole="CHITIETKHUYENMAI" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="DANHGIA">
+    <Key>
+      <PropertyRef Name="MASP" />
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MASP" Type="Guid" Nullable="false" />
+    <Property Name="MANV" Type="Guid" Nullable="false" />
+    <Property Name="NGAYBL" Type="DateTime" Precision="3" />
+    <Property Name="NOIDUNG" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SOSAO" Type="Int32" />
+    <NavigationProperty Name="NHANVIEN" Relationship="Self.FK_DANHGIA_MANV" FromRole="DANHGIA" ToRole="NHANVIEN" />
+    <NavigationProperty Name="SANPHAM" Relationship="Self.FK_DANHGIA_MASP" FromRole="DANHGIA" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="DANHMUCSANPHAM">
+    <Key>
+      <PropertyRef Name="MADMSP" />
+    </Key>
+    <Property Name="MADMSP" Type="Guid" Nullable="false" />
+    <Property Name="TENDMSP" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ANHDMSP" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ISDELETE" Type="Boolean" />
+    <NavigationProperty Name="SANPHAMs" Relationship="Self.FK_SANPHAM_MADMSP" FromRole="DANHMUCSANPHAM" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="DONDATHANG">
+    <Key>
+      <PropertyRef Name="MADH" />
+    </Key>
+    <Property Name="MADH" Type="Guid" Nullable="false" />
+    <Property Name="MANV" Type="Guid" />
+    <Property Name="TRANGTHAI" Type="Int32" />
+    <Property Name="DIACHIGIAO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NGAYDAT" Type="DateTime" Precision="3" />
+    <Property Name="NGAYGIAO" Type="DateTime" Precision="3" />
+    <Property Name="MOTA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CHITIETDATHANGs" Relationship="Self.FK_CHITIETDONHANG_MADH" FromRole="DONDATHANG" ToRole="CHITIETDATHANG" />
+  </EntityType>
+  <EntityType Name="LOAIKHUYENMAI">
+    <Key>
+      <PropertyRef Name="MALOAIKM" />
+    </Key>
+    <Property Name="MALOAIKM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENLOAIKM" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CHITIETKHUYENMAIs" Relationship="Self.FK_CHITIETKHUYENMA_MALOAIKM" FromRole="LOAIKHUYENMAI" ToRole="CHITIETKHUYENMAI" />
+  </EntityType>
+  <EntityType Name="LOAINHANVIEN">
+    <Key>
+      <PropertyRef Name="MALOAINV" />
+    </Key>
+    <Property Name="MALOAINV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENLOAINV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NHANVIENs" Relationship="Self.FK_NHANVIEN_MALOAINV" FromRole="LOAINHANVIEN" ToRole="NHANVIEN" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MANV" Type="Guid" Nullable="false" />
+    <Property Name="TENNV" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TENDN" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MATKHAU" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DIACHI" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NGAYSINH" Type="DateTime" Precision="3" />
+    <Property Name="SODT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="GIOITINH" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MALOAINV" Type="Int32" />
+    <NavigationProperty Name="BINHLUANs" Relationship="Self.FK_BINHLUAN_MANV" FromRole="NHANVIEN" ToRole="BINHLUAN" />
+    <NavigationProperty Name="DANHGIAs" Relationship="Self.FK_DANHGIA_MANV" FromRole="NHANVIEN" ToRole="DANHGIA" />
+    <NavigationProperty Name="LOAINHANVIEN" Relationship="Self.FK_NHANVIEN_MALOAINV" FromRole="NHANVIEN" ToRole="LOAINHANVIEN" />
+    <NavigationProperty Name="SANPHAMs" Relationship="Self.THICHSANPHAM" FromRole="NHANVIEN" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="SANPHAM">
+    <Key>
+      <PropertyRef Name="MASP" />
+    </Key>
+    <Property Name="MASP" Type="Guid" Nullable="false" />
+    <Property Name="MADMSP" Type="Guid" />
+    <Property Name="TENSP" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="GIA" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ANHLONSP" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="DONVISP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SOLUONG" Type="Int32" />
+    <Property Name="LUOTVIEW" Type="Int32" />
+    <Property Name="LUOTTHICH" Type="Int32" />
+    <Property Name="THONGTIN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="THONGBAO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ISPENDING" Type="Boolean" />
+    <Property Name="ISPUBLISH" Type="Boolean" />
+    <Property Name="ISDELETE" Type="Boolean" />
+    <NavigationProperty Name="ANHSANPHAMs" Relationship="Self.FK_ANHSANPHAM_MASP" FromRole="SANPHAM" ToRole="ANHSANPHAM" />
+    <NavigationProperty Name="BAIVETSANPHAMs" Relationship="Self.FK_BAIVETSANPHAM_MASP" FromRole="SANPHAM" ToRole="BAIVETSANPHAM" />
+    <NavigationProperty Name="BINHLUANs" Relationship="Self.FK_BINHLUAN_MASP" FromRole="SANPHAM" ToRole="BINHLUAN" />
+    <NavigationProperty Name="CHITIETDATHANGs" Relationship="Self.FK_CHITIETDONHANG_MASP" FromRole="SANPHAM" ToRole="CHITIETDATHANG" />
+    <NavigationProperty Name="CHITIETKHUYENMAIs" Relationship="Self.FK_CHITIETKHUYENMA_MASP" FromRole="SANPHAM" ToRole="CHITIETKHUYENMAI" />
+    <NavigationProperty Name="DANHGIAs" Relationship="Self.FK_DANHGIA_MASP" FromRole="SANPHAM" ToRole="DANHGIA" />
+    <NavigationProperty Name="DANHMUCSANPHAM" Relationship="Self.FK_SANPHAM_MADMSP" FromRole="SANPHAM" ToRole="DANHMUCSANPHAM" />
+    <NavigationProperty Name="VIDEOSANPHAMs" Relationship="Self.FK_VIDEOSANPHAM_MASP" FromRole="SANPHAM" ToRole="VIDEOSANPHAM" />
+    <NavigationProperty Name="NHANVIENs" Relationship="Self.THICHSANPHAM" FromRole="SANPHAM" ToRole="NHANVIEN" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="VIDEOSANPHAM">
+    <Key>
+      <PropertyRef Name="MAVD" />
+    </Key>
+    <Property Name="MAVD" Type="Guid" Nullable="false" />
+    <Property Name="MASP" Type="Guid" />
+    <Property Name="URL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ISPENDING" Type="Boolean" />
+    <Property Name="ISPUBLISH" Type="Boolean" />
+    <Property Name="ISDELETE" Type="Boolean" />
+    <NavigationProperty Name="SANPHAM" Relationship="Self.FK_VIDEOSANPHAM_MASP" FromRole="VIDEOSANPHAM" ToRole="SANPHAM" />
+  </EntityType>
+  <Association Name="FK_ANHSANPHAM_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
+    <End Role="ANHSANPHAM" Type="Self.ANHSANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="ANHSANPHAM">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BAIVETSANPHAM_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
+    <End Role="BAIVETSANPHAM" Type="Self.BAIVETSANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="BAIVETSANPHAM">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BINHLUAN_MANV">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="BINHLUAN" Type="Self.BINHLUAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="BINHLUAN">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BINHLUAN_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
+    <End Role="BINHLUAN" Type="Self.BINHLUAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="BINHLUAN">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETDONHANG_MADH">
+    <End Role="DONDATHANG" Type="Self.DONDATHANG" Multiplicity="1" />
+    <End Role="CHITIETDATHANG" Type="Self.CHITIETDATHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DONDATHANG">
+        <PropertyRef Name="MADH" />
+      </Principal>
+      <Dependent Role="CHITIETDATHANG">
+        <PropertyRef Name="MADH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETDONHANG_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="1" />
+    <End Role="CHITIETDATHANG" Type="Self.CHITIETDATHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="CHITIETDATHANG">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETKHUYENMA_MALOAIKM">
+    <End Role="LOAIKHUYENMAI" Type="Self.LOAIKHUYENMAI" Multiplicity="1" />
+    <End Role="CHITIETKHUYENMAI" Type="Self.CHITIETKHUYENMAI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAIKHUYENMAI">
+        <PropertyRef Name="MALOAIKM" />
+      </Principal>
+      <Dependent Role="CHITIETKHUYENMAI">
+        <PropertyRef Name="MALOAIKM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETKHUYENMA_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="1" />
+    <End Role="CHITIETKHUYENMAI" Type="Self.CHITIETKHUYENMAI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="CHITIETKHUYENMAI">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DANHGIA_MANV">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="1" />
+    <End Role="DANHGIA" Type="Self.DANHGIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="DANHGIA">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DANHGIA_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="1" />
+    <End Role="DANHGIA" Type="Self.DANHGIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="DANHGIA">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SANPHAM_MADMSP">
+    <End Role="DANHMUCSANPHAM" Type="Self.DANHMUCSANPHAM" Multiplicity="0..1" />
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DANHMUCSANPHAM">
+        <PropertyRef Name="MADMSP" />
+      </Principal>
+      <Dependent Role="SANPHAM">
+        <PropertyRef Name="MADMSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NHANVIEN_MALOAINV">
+    <End Role="LOAINHANVIEN" Type="Self.LOAINHANVIEN" Multiplicity="0..1" />
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAINHANVIEN">
+        <PropertyRef Name="MALOAINV" />
+      </Principal>
+      <Dependent Role="NHANVIEN">
+        <PropertyRef Name="MALOAINV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VIDEOSANPHAM_MASP">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
+    <End Role="VIDEOSANPHAM" Type="Self.VIDEOSANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
+      </Principal>
+      <Dependent Role="VIDEOSANPHAM">
+        <PropertyRef Name="MASP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="THICHSANPHAM">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="*" />
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="DB_HOABANFOOD_VER2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ANHSANPHAMs" EntityType="Self.ANHSANPHAM" />
+    <EntitySet Name="BAIVETSANPHAMs" EntityType="Self.BAIVETSANPHAM" />
+    <EntitySet Name="BINHLUANs" EntityType="Self.BINHLUAN" />
+    <EntitySet Name="CHITIETDATHANGs" EntityType="Self.CHITIETDATHANG" />
+    <EntitySet Name="CHITIETKHUYENMAIs" EntityType="Self.CHITIETKHUYENMAI" />
+    <EntitySet Name="DANHGIAs" EntityType="Self.DANHGIA" />
+    <EntitySet Name="DANHMUCSANPHAMs" EntityType="Self.DANHMUCSANPHAM" />
+    <EntitySet Name="DONDATHANGs" EntityType="Self.DONDATHANG" />
+    <EntitySet Name="LOAIKHUYENMAIs" EntityType="Self.LOAIKHUYENMAI" />
+    <EntitySet Name="LOAINHANVIENs" EntityType="Self.LOAINHANVIEN" />
+    <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
+    <EntitySet Name="SANPHAMs" EntityType="Self.SANPHAM" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="VIDEOSANPHAMs" EntityType="Self.VIDEOSANPHAM" />
+    <AssociationSet Name="FK_ANHSANPHAM_MASP" Association="Self.FK_ANHSANPHAM_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAMs" />
+      <End Role="ANHSANPHAM" EntitySet="ANHSANPHAMs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BAIVETSANPHAM_MASP" Association="Self.FK_BAIVETSANPHAM_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAMs" />
+      <End Role="BAIVETSANPHAM" EntitySet="BAIVETSANPHAMs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BINHLUAN_MANV" Association="Self.FK_BINHLUAN_MANV">
+      <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+      <End Role="BINHLUAN" EntitySet="BINHLUANs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BINHLUAN_MASP" Association="Self.FK_BINHLUAN_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAMs" />
+      <End Role="BINHLUAN" EntitySet="BINHLUANs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETDONHANG_MADH" Association="Self.FK_CHITIETDONHANG_MADH">
+      <End Role="DONDATHANG" EntitySet="DONDATHANGs" />
+      <End Role="CHITIETDATHANG" EntitySet="CHITIETDATHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETDONHANG_MASP" Association="Self.FK_CHITIETDONHANG_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAMs" />
+      <End Role="CHITIETDATHANG" EntitySet="CHITIETDATHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETKHUYENMA_MALOAIKM" Association="Self.FK_CHITIETKHUYENMA_MALOAIKM">
+      <End Role="LOAIKHUYENMAI" EntitySet="LOAIKHUYENMAIs" />
+      <End Role="CHITIETKHUYENMAI" EntitySet="CHITIETKHUYENMAIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETKHUYENMA_MASP" Association="Self.FK_CHITIETKHUYENMA_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAMs" />
+      <End Role="CHITIETKHUYENMAI" EntitySet="CHITIETKHUYENMAIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DANHGIA_MANV" Association="Self.FK_DANHGIA_MANV">
+      <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+      <End Role="DANHGIA" EntitySet="DANHGIAs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DANHGIA_MASP" Association="Self.FK_DANHGIA_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAMs" />
+      <End Role="DANHGIA" EntitySet="DANHGIAs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SANPHAM_MADMSP" Association="Self.FK_SANPHAM_MADMSP">
+      <End Role="DANHMUCSANPHAM" EntitySet="DANHMUCSANPHAMs" />
+      <End Role="SANPHAM" EntitySet="SANPHAMs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NHANVIEN_MALOAINV" Association="Self.FK_NHANVIEN_MALOAINV">
+      <End Role="LOAINHANVIEN" EntitySet="LOAINHANVIENs" />
+      <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VIDEOSANPHAM_MASP" Association="Self.FK_VIDEOSANPHAM_MASP">
+      <End Role="SANPHAM" EntitySet="SANPHAMs" />
+      <End Role="VIDEOSANPHAM" EntitySet="VIDEOSANPHAMs" />
+    </AssociationSet>
+    <AssociationSet Name="THICHSANPHAM" Association="Self.THICHSANPHAM">
+      <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+      <End Role="SANPHAM" EntitySet="SANPHAMs" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_ALL_ANH" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_ANH_Result)" />
+    <FunctionImport Name="SP_GET_ALL_ANH_SP_BY_ID" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_ANH_SP_BY_ID_Result)">
+      <Parameter Name="MASP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_ALL_BAIVIET" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_BAIVIET_Result)" />
+    <FunctionImport Name="SP_GET_ALL_BV_SP_BY_ID" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_BV_SP_BY_ID_Result)">
+      <Parameter Name="MASP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_ALL_DMSP" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_DMSP_Result)" />
+    <FunctionImport Name="SP_GET_ALL_SANPHAM" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_SANPHAM_Result)" />
+    <FunctionImport Name="SP_GET_ALL_SP_DMSP_BY_ID" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_SP_DMSP_BY_ID_Result)">
+      <Parameter Name="MADMSP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_ALL_VD_SP_BY_ID" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_VD_SP_BY_ID_Result)">
+      <Parameter Name="MASP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_ALL_VIDEO" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_VIDEO_Result)" />
+    <FunctionImport Name="SP_GET_ANH_BY_ID" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ANH_BY_ID_Result)">
+      <Parameter Name="MAANH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_BV_BY_ID" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_BV_BY_ID_Result)">
+      <Parameter Name="MABV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_DMSP_BY_ID" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_DMSP_BY_ID_Result)">
+      <Parameter Name="MADMSP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_SANPHAM_BY_ID" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_SANPHAM_BY_ID_Result)">
+      <Parameter Name="MASP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_VIDEO_BY_ID" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_VIDEO_BY_ID_Result)">
+      <Parameter Name="MAVD" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DB_HOABANFOOD_VER2Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DB_HOABANFOOD_VER2Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_SUA_ANH">
+      <Parameter Name="MAANH" Mode="In" Type="String" />
+      <Parameter Name="MASP" Mode="In" Type="String" />
+      <Parameter Name="URL" Mode="In" Type="String" />
+      <Parameter Name="ANHSP" Mode="In" Type="Binary" />
+      <Parameter Name="ISPENDING" Mode="In" Type="Boolean" />
+      <Parameter Name="ISPUBLISH" Mode="In" Type="Boolean" />
+      <Parameter Name="ISDELETE" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="SP_SUA_BAIVIET">
+      <Parameter Name="MABV" Mode="In" Type="String" />
+      <Parameter Name="MASP" Mode="In" Type="String" />
+      <Parameter Name="TIEUDE" Mode="In" Type="String" />
+      <Parameter Name="NOIDUNG" Mode="In" Type="String" />
+      <Parameter Name="ISPENDING" Mode="In" Type="Boolean" />
+      <Parameter Name="ISPUBLISH" Mode="In" Type="Boolean" />
+      <Parameter Name="ISDELETE" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="SP_SUA_DANHMUC_SANPHAM">
+      <Parameter Name="MADMSP" Mode="In" Type="String" />
+      <Parameter Name="TENDMSP" Mode="In" Type="String" />
+      <Parameter Name="ANHDMSP" Mode="In" Type="Binary" />
+      <Parameter Name="ISDELETE" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="SP_SUA_SANPHAM">
+      <Parameter Name="MASP" Mode="In" Type="String" />
+      <Parameter Name="MADMSP" Mode="In" Type="String" />
+      <Parameter Name="TENSP" Mode="In" Type="String" />
+      <Parameter Name="GIA" Mode="In" Type="Decimal" />
+      <Parameter Name="ANHLONSP" Mode="In" Type="Binary" />
+      <Parameter Name="DONVISP" Mode="In" Type="String" />
+      <Parameter Name="SOLUONG" Mode="In" Type="Int32" />
+      <Parameter Name="LUOTVIEW" Mode="In" Type="Int32" />
+      <Parameter Name="LUOTTHICH" Mode="In" Type="Int32" />
+      <Parameter Name="THONGTIN" Mode="In" Type="String" />
+      <Parameter Name="THONGBAO" Mode="In" Type="String" />
+      <Parameter Name="ISPENDING" Mode="In" Type="Boolean" />
+      <Parameter Name="ISPUBLISH" Mode="In" Type="Boolean" />
+      <Parameter Name="ISDELETE" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="SP_SUA_VIDEO">
+      <Parameter Name="MAVD" Mode="In" Type="String" />
+      <Parameter Name="MASP" Mode="In" Type="String" />
+      <Parameter Name="URL" Mode="In" Type="String" />
+      <Parameter Name="ISPENDING" Mode="In" Type="Boolean" />
+      <Parameter Name="ISPUBLISH" Mode="In" Type="Boolean" />
+      <Parameter Name="ISDELETE" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="SP_THEM_ANH">
+      <Parameter Name="MASP" Mode="In" Type="String" />
+      <Parameter Name="URL" Mode="In" Type="String" />
+      <Parameter Name="ANHSP" Mode="In" Type="Binary" />
+      <Parameter Name="ISPENDING" Mode="In" Type="Boolean" />
+      <Parameter Name="ISPUBLISH" Mode="In" Type="Boolean" />
+      <Parameter Name="ISDELETE" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="SP_THEM_BAIVIET">
+      <Parameter Name="MASP" Mode="In" Type="String" />
+      <Parameter Name="TIEUDE" Mode="In" Type="String" />
+      <Parameter Name="NOIDUNG" Mode="In" Type="String" />
+      <Parameter Name="ISPENDING" Mode="In" Type="Boolean" />
+      <Parameter Name="ISPUBLISH" Mode="In" Type="Boolean" />
+      <Parameter Name="ISDELETE" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="SP_THEM_DANHMUC_SANPHAM">
+      <Parameter Name="TENDMSP" Mode="In" Type="String" />
+      <Parameter Name="ANHDMSP" Mode="In" Type="Binary" />
+      <Parameter Name="ISDELETE" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="SP_THEM_SANPHAM">
+      <Parameter Name="MADMSP" Mode="In" Type="String" />
+      <Parameter Name="TENSP" Mode="In" Type="String" />
+      <Parameter Name="GIA" Mode="In" Type="Decimal" />
+      <Parameter Name="ANHLONSP" Mode="In" Type="Binary" />
+      <Parameter Name="DONVISP" Mode="In" Type="String" />
+      <Parameter Name="SOLUONG" Mode="In" Type="Int32" />
+      <Parameter Name="LUOTVIEW" Mode="In" Type="Int32" />
+      <Parameter Name="LUOTTHICH" Mode="In" Type="Int32" />
+      <Parameter Name="THONGTIN" Mode="In" Type="String" />
+      <Parameter Name="THONGBAO" Mode="In" Type="String" />
+      <Parameter Name="ISPENDING" Mode="In" Type="Boolean" />
+      <Parameter Name="ISPUBLISH" Mode="In" Type="Boolean" />
+      <Parameter Name="ISDELETE" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="SP_THEM_VIDEO">
+      <Parameter Name="MASP" Mode="In" Type="String" />
+      <Parameter Name="URL" Mode="In" Type="String" />
+      <Parameter Name="ISPENDING" Mode="In" Type="Boolean" />
+      <Parameter Name="ISPUBLISH" Mode="In" Type="Boolean" />
+      <Parameter Name="ISDELETE" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="SP_XOA_ANH">
+      <Parameter Name="MAANH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_XOA_BAIVIET">
+      <Parameter Name="MABV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_XOA_DANHMUC_SANPHAM">
+      <Parameter Name="MADMSP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_XOA_SANPHAM">
+      <Parameter Name="MASP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_XOA_VIDEO">
+      <Parameter Name="MAVD" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_ALL_DMSP_DEMO" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_DMSP_DEMO_Result)" />
+    <FunctionImport Name="SP_ALL_LOAIKM_BY_ID" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_ALL_LOAIKM_BY_ID_Result)">
+      <Parameter Name="MALOAIKM" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_ALL_KHUYENMAI" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_KHUYENMAI_Result)" />
+    <FunctionImport Name="SP_GET_ALL_CHITIETKHUYENMAI" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_CHITIETKHUYENMAI_Result)" />
+    <FunctionImport Name="SP_GET_CHITIETKHUYENMAI_BY_MASP_MAKM" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_CHITIETKHUYENMAI_BY_MASP_MAKM_Result)">
+      <Parameter Name="MALOAIKM" Mode="In" Type="Int32" />
+      <Parameter Name="MASP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_ALL_LOAINHANVIEN" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_LOAINHANVIEN_Result)" />
+    <FunctionImport Name="SP_GET_LOAINHANVIEN_BY_ID" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_LOAINHANVIEN_BY_ID_Result)">
+      <Parameter Name="MALOAINV" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_ALL_NHANVIEN" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_NHANVIEN_Result)" />
+    <FunctionImport Name="SP_GET_ALL_NHANVIEN_BY_ID" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_NHANVIEN_BY_ID_Result)">
+      <Parameter Name="MANV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_ALL_CTDH" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_CTDH_Result)" />
+    <FunctionImport Name="SP_GET_ALL_DDH" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_DDH_Result)" />
+    <FunctionImport Name="SP_GET_ALL_SANPHAM_DUOC_THICH" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_SANPHAM_DUOC_THICH_Result)">
+      <Parameter Name="MASP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_ALL_SP_NHANVIEN_THICH" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_SP_NHANVIEN_THICH_Result)">
+      <Parameter Name="MANV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GET_ALL_THICHSANPHAM" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_THICHSANPHAM_Result)" />
+    <FunctionImport Name="SP_GET_ALL_BINHLUAN" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_BINHLUAN_Result)" />
+    <FunctionImport Name="SP_GET_ALL_DANHGIA" ReturnType="Collection(DB_HOABANFOOD_VER2Model.SP_GET_ALL_DANHGIA_Result)" />
+  </EntityContainer>
+  <ComplexType Name="SP_GET_ALL_ANH_Result">
+    <Property Type="Guid" Name="MAANH" Nullable="false" />
+    <Property Type="Guid" Name="MASP" Nullable="true" />
+    <Property Type="String" Name="URL" Nullable="true" MaxLength="Max" />
+    <Property Type="Binary" Name="ANHSP" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISPENDING" Nullable="true" />
+    <Property Type="Boolean" Name="ISPUBLISH" Nullable="true" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_ANH_SP_BY_ID_Result">
+    <Property Type="Guid" Name="MAANH" Nullable="false" />
+    <Property Type="Guid" Name="MASP" Nullable="true" />
+    <Property Type="String" Name="URL" Nullable="true" MaxLength="Max" />
+    <Property Type="Binary" Name="ANHSP" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISPENDING" Nullable="true" />
+    <Property Type="Boolean" Name="ISPUBLISH" Nullable="true" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_BAIVIET_Result">
+    <Property Type="Guid" Name="MABV" Nullable="false" />
+    <Property Type="Guid" Name="MASP" Nullable="true" />
+    <Property Type="String" Name="TIEUDE" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="NOIDUNG" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISPENDING" Nullable="true" />
+    <Property Type="Boolean" Name="ISPUBLISH" Nullable="true" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_BV_SP_BY_ID_Result">
+    <Property Type="Guid" Name="MABV" Nullable="false" />
+    <Property Type="Guid" Name="MASP" Nullable="true" />
+    <Property Type="String" Name="TIEUDE" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="NOIDUNG" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISPENDING" Nullable="true" />
+    <Property Type="Boolean" Name="ISPUBLISH" Nullable="true" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_DMSP_Result">
+    <Property Type="Guid" Name="MADMSP" Nullable="false" />
+    <Property Type="String" Name="TENDMSP" Nullable="true" MaxLength="200" />
+    <Property Type="Binary" Name="ANHDMSP" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_SANPHAM_Result">
+    <Property Type="Guid" Name="MASP" Nullable="false" />
+    <Property Type="Guid" Name="MADMSP" Nullable="true" />
+    <Property Type="String" Name="TENSP" Nullable="true" MaxLength="200" />
+    <Property Type="Decimal" Name="GIA" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Binary" Name="ANHLONSP" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="DONVISP" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="SOLUONG" Nullable="true" />
+    <Property Type="Int32" Name="LUOTVIEW" Nullable="true" />
+    <Property Type="Int32" Name="LUOTTHICH" Nullable="true" />
+    <Property Type="String" Name="THONGTIN" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="THONGBAO" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISPENDING" Nullable="true" />
+    <Property Type="Boolean" Name="ISPUBLISH" Nullable="true" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_SP_DMSP_BY_ID_Result">
+    <Property Type="Guid" Name="MASP" Nullable="false" />
+    <Property Type="Guid" Name="MADMSP" Nullable="true" />
+    <Property Type="String" Name="TENSP" Nullable="true" MaxLength="200" />
+    <Property Type="Decimal" Name="GIA" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Binary" Name="ANHLONSP" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="DONVISP" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="SOLUONG" Nullable="true" />
+    <Property Type="Int32" Name="LUOTVIEW" Nullable="true" />
+    <Property Type="Int32" Name="LUOTTHICH" Nullable="true" />
+    <Property Type="String" Name="THONGTIN" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="THONGBAO" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISPENDING" Nullable="true" />
+    <Property Type="Boolean" Name="ISPUBLISH" Nullable="true" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_VD_SP_BY_ID_Result">
+    <Property Type="Guid" Name="MAVD" Nullable="false" />
+    <Property Type="Guid" Name="MASP" Nullable="true" />
+    <Property Type="String" Name="URL" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISPENDING" Nullable="true" />
+    <Property Type="Boolean" Name="ISPUBLISH" Nullable="true" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_VIDEO_Result">
+    <Property Type="Guid" Name="MAVD" Nullable="false" />
+    <Property Type="Guid" Name="MASP" Nullable="true" />
+    <Property Type="String" Name="URL" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISPENDING" Nullable="true" />
+    <Property Type="Boolean" Name="ISPUBLISH" Nullable="true" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ANH_BY_ID_Result">
+    <Property Type="Guid" Name="MAANH" Nullable="false" />
+    <Property Type="Guid" Name="MASP" Nullable="true" />
+    <Property Type="String" Name="URL" Nullable="true" MaxLength="Max" />
+    <Property Type="Binary" Name="ANHSP" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISPENDING" Nullable="true" />
+    <Property Type="Boolean" Name="ISPUBLISH" Nullable="true" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_BV_BY_ID_Result">
+    <Property Type="Guid" Name="MABV" Nullable="false" />
+    <Property Type="Guid" Name="MASP" Nullable="true" />
+    <Property Type="String" Name="TIEUDE" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="NOIDUNG" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISPENDING" Nullable="true" />
+    <Property Type="Boolean" Name="ISPUBLISH" Nullable="true" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_DMSP_BY_ID_Result">
+    <Property Type="Guid" Name="MADMSP" Nullable="false" />
+    <Property Type="String" Name="TENDMSP" Nullable="true" MaxLength="200" />
+    <Property Type="Binary" Name="ANHDMSP" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_SANPHAM_BY_ID_Result">
+    <Property Type="Guid" Name="MASP" Nullable="false" />
+    <Property Type="Guid" Name="MADMSP" Nullable="true" />
+    <Property Type="String" Name="TENSP" Nullable="true" MaxLength="200" />
+    <Property Type="Decimal" Name="GIA" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Binary" Name="ANHLONSP" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="DONVISP" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="SOLUONG" Nullable="true" />
+    <Property Type="Int32" Name="LUOTVIEW" Nullable="true" />
+    <Property Type="Int32" Name="LUOTTHICH" Nullable="true" />
+    <Property Type="String" Name="THONGTIN" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="THONGBAO" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISPENDING" Nullable="true" />
+    <Property Type="Boolean" Name="ISPUBLISH" Nullable="true" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_VIDEO_BY_ID_Result">
+    <Property Type="Guid" Name="MAVD" Nullable="false" />
+    <Property Type="Guid" Name="MASP" Nullable="true" />
+    <Property Type="String" Name="URL" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISPENDING" Nullable="true" />
+    <Property Type="Boolean" Name="ISPUBLISH" Nullable="true" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_DMSP_DEMO_Result">
+    <Property Type="Guid" Name="MADMSP" Nullable="false" />
+    <Property Type="String" Name="TENDMSP" Nullable="true" MaxLength="200" />
+    <Property Type="Binary" Name="ANHDMSP" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="ISDELETE" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_ALL_LOAIKM_BY_ID_Result">
+    <Property Type="Int32" Name="MALOAIKM" Nullable="false" />
+    <Property Type="String" Name="TENLOAIKM" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_KHUYENMAI_Result">
+    <Property Type="Int32" Name="MALOAIKM" Nullable="false" />
+    <Property Type="String" Name="TENLOAIKM" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_CHITIETKHUYENMAI_Result">
+    <Property Type="Int32" Name="MALOAIKM" Nullable="false" />
+    <Property Type="Guid" Name="MASP" Nullable="false" />
+    <Property Type="DateTime" Name="NGAYBATDAUKM" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="NGAYKETTHUCKM" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="PHANTRAM" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_CHITIETKHUYENMAI_BY_MASP_MAKM_Result">
+    <Property Type="Int32" Name="MALOAIKM" Nullable="false" />
+    <Property Type="Guid" Name="MASP" Nullable="false" />
+    <Property Type="DateTime" Name="NGAYBATDAUKM" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="NGAYKETTHUCKM" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="PHANTRAM" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_LOAINHANVIEN_Result">
+    <Property Type="Int32" Name="MALOAINV" Nullable="false" />
+    <Property Type="String" Name="TENLOAINV" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_LOAINHANVIEN_BY_ID_Result">
+    <Property Type="Int32" Name="MALOAINV" Nullable="false" />
+    <Property Type="String" Name="TENLOAINV" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_NHANVIEN_Result">
+    <Property Type="Guid" Name="MANV" Nullable="false" />
+    <Property Type="String" Name="TENNV" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TENDN" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="MATKHAU" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="DIACHI" Nullable="true" MaxLength="Max" />
+    <Property Type="DateTime" Name="NGAYSINH" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SODT" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="GIOITINH" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="EMAIL" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="MALOAINV" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_NHANVIEN_BY_ID_Result">
+    <Property Type="Guid" Name="MANV" Nullable="false" />
+    <Property Type="String" Name="TENNV" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TENDN" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="MATKHAU" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="DIACHI" Nullable="true" MaxLength="Max" />
+    <Property Type="DateTime" Name="NGAYSINH" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SODT" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="GIOITINH" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="EMAIL" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="MALOAINV" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_CTDH_Result">
+    <Property Type="Guid" Name="MADH" Nullable="false" />
+    <Property Type="Guid" Name="MASP" Nullable="false" />
+    <Property Type="Int32" Name="SOLUONG" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_DDH_Result">
+    <Property Type="Guid" Name="MANV" Nullable="true" />
+    <Property Type="Guid" Name="MADH" Nullable="false" />
+    <Property Type="Int32" Name="TRANGTHAI" Nullable="true" />
+    <Property Type="String" Name="DIACHIGIAO" Nullable="true" MaxLength="Max" />
+    <Property Type="DateTime" Name="NGAYDAT" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="NGAYGIAO" Nullable="true" Precision="23" />
+    <Property Type="String" Name="MOTA" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_SANPHAM_DUOC_THICH_Result">
+    <Property Type="Guid" Name="MASP" Nullable="false" />
+    <Property Type="Guid" Name="MANV" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_SP_NHANVIEN_THICH_Result">
+    <Property Type="Guid" Name="MASP" Nullable="false" />
+    <Property Type="Guid" Name="MANV" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_THICHSANPHAM_Result">
+    <Property Type="Guid" Name="MASP" Nullable="false" />
+    <Property Type="Guid" Name="MANV" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_BINHLUAN_Result">
+    <Property Type="Guid" Name="MABL" Nullable="false" />
+    <Property Type="Guid" Name="MANV" Nullable="true" />
+    <Property Type="Guid" Name="MASP" Nullable="true" />
+    <Property Type="String" Name="NOIDUNG" Nullable="true" MaxLength="Max" />
+    <Property Type="DateTime" Name="NGAYBINHLUAN" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="SP_GET_ALL_DANHGIA_Result">
+    <Property Type="Guid" Name="MASP" Nullable="false" />
+    <Property Type="Guid" Name="MANV" Nullable="false" />
+    <Property Type="DateTime" Name="NGAYBL" Nullable="true" Precision="23" />
+    <Property Type="String" Name="NOIDUNG" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="SOSAO" Nullable="true" />
+  </ComplexType>
+</Schema>

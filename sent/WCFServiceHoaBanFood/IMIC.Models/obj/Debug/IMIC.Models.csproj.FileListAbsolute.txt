@@ -1,0 +1,48 @@
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.Models.dll.config
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.Models.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.Models.pdb
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.xml
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.Models\obj\Debug\IMIC.Models.csprojResolveAssemblyReference.cache
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.Models\obj\Debug\IMIC.Models.dll
+C:\Users\sang\Desktop\Project05\WCFServiceHoaBanFood\IMIC.Models\obj\Debug\IMIC.Models.pdb
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.Models.dll.config
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.Models.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.Models.pdb
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.xml
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.Models\obj\Debug\IMIC.Models.csprojResolveAssemblyReference.cache
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.Models\obj\Debug\IMIC.Models.dll
+C:\Users\sang\Desktop\WCF HOABAN FOOD - 07022017\WCFServiceHoaBanFood\IMIC.Models\obj\Debug\IMIC.Models.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.Models.dll.config
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.Models.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.Models.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.xml
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.Models\obj\Debug\IMIC.Models.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.Models\obj\Debug\IMIC.Models.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\WCFServiceHoaBanFood\IMIC.Models\obj\Debug\IMIC.Models.csprojResolveAssemblyReference.cache
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.Models.dll.config
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.Models.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.Models.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.EntityObjects.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\IMIC.EntityObjects.pdb
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.xml
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.Models\obj\Debug\IMIC.Models.csprojResolveAssemblyReference.cache
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.Models\obj\Debug\IMIC.Models.dll
+C:\Users\sang\Desktop\HOABANFOD_FINAL\BANFINAL\WCFServiceHoaBanFood\IMIC.Models\obj\Debug\IMIC.Models.pdb

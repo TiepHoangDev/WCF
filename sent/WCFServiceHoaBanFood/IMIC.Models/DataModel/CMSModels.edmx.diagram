@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c100e0d1ee1d4410abb06b5463242297" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_HOABANFOOD_VER2Model.ANHSANPHAM" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HOABANFOOD_VER2Model.BAIVETSANPHAM" Width="1.5" PointX="7.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HOABANFOOD_VER2Model.BINHLUAN" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HOABANFOOD_VER2Model.CHITIETDATHANG" Width="1.5" PointX="10.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HOABANFOOD_VER2Model.CHITIETKHUYENMAI" Width="1.5" PointX="10.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HOABANFOOD_VER2Model.DANHGIA" Width="1.5" PointX="8.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HOABANFOOD_VER2Model.DANHMUCSANPHAM" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HOABANFOOD_VER2Model.DONDATHANG" Width="1.5" PointX="8.25" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HOABANFOOD_VER2Model.LOAIKHUYENMAI" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HOABANFOOD_VER2Model.LOAINHANVIEN" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HOABANFOOD_VER2Model.NHANVIEN" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HOABANFOOD_VER2Model.SANPHAM" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HOABANFOOD_VER2Model.sysdiagram" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HOABANFOOD_VER2Model.VIDEOSANPHAM" Width="1.5" PointX="7.5" PointY="16.5" IsExpanded="true" />
+        <AssociationConnector Association="DB_HOABANFOOD_VER2Model.FK_ANHSANPHAM_MASP" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HOABANFOOD_VER2Model.FK_BAIVETSANPHAM_MASP" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HOABANFOOD_VER2Model.FK_BINHLUAN_MANV" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HOABANFOOD_VER2Model.FK_BINHLUAN_MASP" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HOABANFOOD_VER2Model.FK_CHITIETDONHANG_MADH" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HOABANFOOD_VER2Model.FK_CHITIETDONHANG_MASP" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HOABANFOOD_VER2Model.FK_CHITIETKHUYENMA_MALOAIKM" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HOABANFOOD_VER2Model.FK_CHITIETKHUYENMA_MASP" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HOABANFOOD_VER2Model.FK_DANHGIA_MANV" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HOABANFOOD_VER2Model.FK_DANHGIA_MASP" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HOABANFOOD_VER2Model.FK_SANPHAM_MADMSP" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HOABANFOOD_VER2Model.FK_NHANVIEN_MALOAINV" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HOABANFOOD_VER2Model.FK_VIDEOSANPHAM_MASP" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HOABANFOOD_VER2Model.THICHSANPHAM" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

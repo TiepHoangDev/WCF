@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4D1982E-7DF0-40AA-8390-2362E940CBB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IMIC.Models</RootNamespace>
+    <AssemblyName>IMIC.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ANHSPModel.cs" />
+    <Compile Include="BAIVIETSPModel.cs" />
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="ChitietKmModel.cs" />
+    <Compile Include="DataModel\SP_GET_ALL_BINHLUAN_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_DANHGIA_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ThichSPModel.cs" />
+    <Compile Include="CTDHModel.cs" />
+    <Compile Include="DataModel\ANHSANPHAM.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\BAIVETSANPHAM.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\BINHLUAN.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\CHITIETDATHANG.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\CHITIETKHUYENMAI.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\CMSModels.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CMSModels.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\CMSModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\CMSModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CMSModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\DANHGIA.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\DANHMUCSANPHAM.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\DONDATHANG.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\LOAIKHUYENMAI.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\LOAINHANVIEN.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\NHANVIEN.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SANPHAM.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_ALL_LOAIKM_BY_ID_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_ANH_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_ANH_SP_BY_ID_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_BAIVIET_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_BV_SP_BY_ID_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_CHITIETKHUYENMAI_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_CTDH_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_DDH_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_DMSP_DEMO_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_DMSP_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_KHUYENMAI_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_LOAINHANVIEN_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_NHANVIEN_BY_ID_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_NHANVIEN_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_SANPHAM_DUOC_THICH_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_SANPHAM_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_SP_DMSP_BY_ID_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_SP_NHANVIEN_THICH_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_THICHSANPHAM_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_VD_SP_BY_ID_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ALL_VIDEO_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_ANH_BY_ID_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_BV_BY_ID_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_CHITIETKHUYENMAI_BY_MASP_MAKM_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_DMSP_BY_ID_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_LOAINHANVIEN_BY_ID_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_SANPHAM_BY_ID_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\SP_GET_VIDEO_BY_ID_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\sp_helpdiagrams_Result.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\sysdiagram.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\VIDEOSANPHAM.cs">
+      <DependentUpon>CMSModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DDHModel.cs" />
+    <Compile Include="DMSPModel.cs" />
+    <Compile Include="LoaiKmModel.cs" />
+    <Compile Include="LoaiNhanVienModel.cs" />
+    <Compile Include="NhanVienModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SPModel.cs" />
+    <Compile Include="VIDEOSPModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IMIC.EntityObjects\IMIC.EntityObjects.csproj">
+      <Project>{22eea01e-3324-4e22-a402-2ef9ed7a4f41}</Project>
+      <Name>IMIC.EntityObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DataModel\CMSModels.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CMSModels.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataModel\CMSModels.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CMSModels.edmx</DependentUpon>
+      <LastGenOutput>CMSModels.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DataModel\CMSModels.edmx.diagram">
+      <DependentUpon>CMSModels.edmx</DependentUpon>
+    </None>
+    <None Include="DataModel\CMSModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CMSModels.edmx</DependentUpon>
+      <LastGenOutput>CMSModels.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

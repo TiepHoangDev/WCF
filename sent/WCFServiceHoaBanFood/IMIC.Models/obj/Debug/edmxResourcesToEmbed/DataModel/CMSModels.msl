@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_HOABANFOOD_VER2ModelStoreContainer" CdmEntityContainer="DB_HOABANFOOD_VER2Entities">
+    <EntitySetMapping Name="ANHSANPHAMs">
+      <EntityTypeMapping TypeName="DB_HOABANFOOD_VER2Model.ANHSANPHAM">
+        <MappingFragment StoreEntitySet="ANHSANPHAM">
+          <ScalarProperty Name="MAANH" ColumnName="MAANH" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ANHSP" ColumnName="ANHSP" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BAIVETSANPHAMs">
+      <EntityTypeMapping TypeName="DB_HOABANFOOD_VER2Model.BAIVETSANPHAM">
+        <MappingFragment StoreEntitySet="BAIVETSANPHAM">
+          <ScalarProperty Name="MABV" ColumnName="MABV" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="TIEUDE" ColumnName="TIEUDE" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BINHLUANs">
+      <EntityTypeMapping TypeName="DB_HOABANFOOD_VER2Model.BINHLUAN">
+        <MappingFragment StoreEntitySet="BINHLUAN">
+          <ScalarProperty Name="MABL" ColumnName="MABL" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="NGAYBINHLUAN" ColumnName="NGAYBINHLUAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHITIETDATHANGs">
+      <EntityTypeMapping TypeName="DB_HOABANFOOD_VER2Model.CHITIETDATHANG">
+        <MappingFragment StoreEntitySet="CHITIETDATHANG">
+          <ScalarProperty Name="MADH" ColumnName="MADH" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHITIETKHUYENMAIs">
+      <EntityTypeMapping TypeName="DB_HOABANFOOD_VER2Model.CHITIETKHUYENMAI">
+        <MappingFragment StoreEntitySet="CHITIETKHUYENMAI">
+          <ScalarProperty Name="MALOAIKM" ColumnName="MALOAIKM" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="NGAYBATDAUKM" ColumnName="NGAYBATDAUKM" />
+          <ScalarProperty Name="NGAYKETTHUCKM" ColumnName="NGAYKETTHUCKM" />
+          <ScalarProperty Name="PHANTRAM" ColumnName="PHANTRAM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DANHGIAs">
+      <EntityTypeMapping TypeName="DB_HOABANFOOD_VER2Model.DANHGIA">
+        <MappingFragment StoreEntitySet="DANHGIA">
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="NGAYBL" ColumnName="NGAYBL" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="SOSAO" ColumnName="SOSAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DANHMUCSANPHAMs">
+      <EntityTypeMapping TypeName="DB_HOABANFOOD_VER2Model.DANHMUCSANPHAM">
+        <MappingFragment StoreEntitySet="DANHMUCSANPHAM">
+          <ScalarProperty Name="MADMSP" ColumnName="MADMSP" />
+          <ScalarProperty Name="TENDMSP" ColumnName="TENDMSP" />
+          <ScalarProperty Name="ANHDMSP" ColumnName="ANHDMSP" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DONDATHANGs">
+      <EntityTypeMapping TypeName="DB_HOABANFOOD_VER2Model.DONDATHANG">
+        <MappingFragment StoreEntitySet="DONDATHANG">
+          <ScalarProperty Name="MADH" ColumnName="MADH" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="DIACHIGIAO" ColumnName="DIACHIGIAO" />
+          <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
+          <ScalarProperty Name="NGAYGIAO" ColumnName="NGAYGIAO" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAIKHUYENMAIs">
+      <EntityTypeMapping TypeName="DB_HOABANFOOD_VER2Model.LOAIKHUYENMAI">
+        <MappingFragment StoreEntitySet="LOAIKHUYENMAI">
+          <ScalarProperty Name="MALOAIKM" ColumnName="MALOAIKM" />
+          <ScalarProperty Name="TENLOAIKM" ColumnName="TENLOAIKM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAINHANVIENs">
+      <EntityTypeMapping TypeName="DB_HOABANFOOD_VER2Model.LOAINHANVIEN">
+        <MappingFragment StoreEntitySet="LOAINHANVIEN">
+          <ScalarProperty Name="MALOAINV" ColumnName="MALOAINV" />
+          <ScalarProperty Name="TENLOAINV" ColumnName="TENLOAINV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHANVIENs">
+      <EntityTypeMapping TypeName="DB_HOABANFOOD_VER2Model.NHANVIEN">
+        <MappingFragment StoreEntitySet="NHANVIEN">
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="TENNV" ColumnName="TENNV" />
+          <ScalarProperty Name="TENDN" ColumnName="TENDN" />
+          <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="SODT" ColumnName="SODT" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="MALOAINV" ColumnName="MALOAINV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SANPHAMs">
+      <EntityTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SANPHAM">
+        <MappingFragment StoreEntitySet="SANPHAM">
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="MADMSP" ColumnName="MADMSP" />
+          <ScalarProperty Name="TENSP" ColumnName="TENSP" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="ANHLONSP" ColumnName="ANHLONSP" />
+          <ScalarProperty Name="DONVISP" ColumnName="DONVISP" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="LUOTVIEW" ColumnName="LUOTVIEW" />
+          <ScalarProperty Name="LUOTTHICH" ColumnName="LUOTTHICH" />
+          <ScalarProperty Name="THONGTIN" ColumnName="THONGTIN" />
+          <ScalarProperty Name="THONGBAO" ColumnName="THONGBAO" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DB_HOABANFOOD_VER2Model.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIDEOSANPHAMs">
+      <EntityTypeMapping TypeName="DB_HOABANFOOD_VER2Model.VIDEOSANPHAM">
+        <MappingFragment StoreEntitySet="VIDEOSANPHAM">
+          <ScalarProperty Name="MAVD" ColumnName="MAVD" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="THICHSANPHAM" TypeName="DB_HOABANFOOD_VER2Model.THICHSANPHAM" StoreEntitySet="THICHSANPHAM">
+      <EndProperty Name="NHANVIEN">
+        <ScalarProperty Name="MANV" ColumnName="MANV" />
+      </EndProperty>
+      <EndProperty Name="SANPHAM">
+        <ScalarProperty Name="MASP" ColumnName="MASP" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DB_HOABANFOOD_VER2Model.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DB_HOABANFOOD_VER2Model.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DB_HOABANFOOD_VER2Model.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_ANH" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_ANH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_ANH_Result">
+          <ScalarProperty Name="MAANH" ColumnName="MAANH" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ANHSP" ColumnName="ANHSP" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_ANH_SP_BY_ID" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_ANH_SP_BY_ID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_ANH_SP_BY_ID_Result">
+          <ScalarProperty Name="MAANH" ColumnName="MAANH" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ANHSP" ColumnName="ANHSP" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_BAIVIET" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_BAIVIET">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_BAIVIET_Result">
+          <ScalarProperty Name="MABV" ColumnName="MABV" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="TIEUDE" ColumnName="TIEUDE" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_BV_SP_BY_ID" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_BV_SP_BY_ID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_BV_SP_BY_ID_Result">
+          <ScalarProperty Name="MABV" ColumnName="MABV" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="TIEUDE" ColumnName="TIEUDE" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_DMSP" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_DMSP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_DMSP_Result">
+          <ScalarProperty Name="MADMSP" ColumnName="MADMSP" />
+          <ScalarProperty Name="TENDMSP" ColumnName="TENDMSP" />
+          <ScalarProperty Name="ANHDMSP" ColumnName="ANHDMSP" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_SANPHAM" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_SANPHAM">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_SANPHAM_Result">
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="MADMSP" ColumnName="MADMSP" />
+          <ScalarProperty Name="TENSP" ColumnName="TENSP" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="ANHLONSP" ColumnName="ANHLONSP" />
+          <ScalarProperty Name="DONVISP" ColumnName="DONVISP" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="LUOTVIEW" ColumnName="LUOTVIEW" />
+          <ScalarProperty Name="LUOTTHICH" ColumnName="LUOTTHICH" />
+          <ScalarProperty Name="THONGTIN" ColumnName="THONGTIN" />
+          <ScalarProperty Name="THONGBAO" ColumnName="THONGBAO" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_SP_DMSP_BY_ID" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_SP_DMSP_BY_ID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_SP_DMSP_BY_ID_Result">
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="MADMSP" ColumnName="MADMSP" />
+          <ScalarProperty Name="TENSP" ColumnName="TENSP" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="ANHLONSP" ColumnName="ANHLONSP" />
+          <ScalarProperty Name="DONVISP" ColumnName="DONVISP" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="LUOTVIEW" ColumnName="LUOTVIEW" />
+          <ScalarProperty Name="LUOTTHICH" ColumnName="LUOTTHICH" />
+          <ScalarProperty Name="THONGTIN" ColumnName="THONGTIN" />
+          <ScalarProperty Name="THONGBAO" ColumnName="THONGBAO" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_VD_SP_BY_ID" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_VD_SP_BY_ID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_VD_SP_BY_ID_Result">
+          <ScalarProperty Name="MAVD" ColumnName="MAVD" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_VIDEO" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_VIDEO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_VIDEO_Result">
+          <ScalarProperty Name="MAVD" ColumnName="MAVD" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ANH_BY_ID" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ANH_BY_ID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ANH_BY_ID_Result">
+          <ScalarProperty Name="MAANH" ColumnName="MAANH" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ANHSP" ColumnName="ANHSP" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_BV_BY_ID" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_BV_BY_ID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_BV_BY_ID_Result">
+          <ScalarProperty Name="MABV" ColumnName="MABV" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="TIEUDE" ColumnName="TIEUDE" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_DMSP_BY_ID" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_DMSP_BY_ID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_DMSP_BY_ID_Result">
+          <ScalarProperty Name="MADMSP" ColumnName="MADMSP" />
+          <ScalarProperty Name="TENDMSP" ColumnName="TENDMSP" />
+          <ScalarProperty Name="ANHDMSP" ColumnName="ANHDMSP" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_SANPHAM_BY_ID" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_SANPHAM_BY_ID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_SANPHAM_BY_ID_Result">
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="MADMSP" ColumnName="MADMSP" />
+          <ScalarProperty Name="TENSP" ColumnName="TENSP" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+          <ScalarProperty Name="ANHLONSP" ColumnName="ANHLONSP" />
+          <ScalarProperty Name="DONVISP" ColumnName="DONVISP" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="LUOTVIEW" ColumnName="LUOTVIEW" />
+          <ScalarProperty Name="LUOTTHICH" ColumnName="LUOTTHICH" />
+          <ScalarProperty Name="THONGTIN" ColumnName="THONGTIN" />
+          <ScalarProperty Name="THONGBAO" ColumnName="THONGBAO" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_VIDEO_BY_ID" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_VIDEO_BY_ID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_VIDEO_BY_ID_Result">
+          <ScalarProperty Name="MAVD" ColumnName="MAVD" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="ISPENDING" ColumnName="ISPENDING" />
+          <ScalarProperty Name="ISPUBLISH" ColumnName="ISPUBLISH" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DB_HOABANFOOD_VER2Model.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DB_HOABANFOOD_VER2Model.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DB_HOABANFOOD_VER2Model.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="SP_SUA_ANH" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_SUA_ANH" />
+    <FunctionImportMapping FunctionImportName="SP_SUA_BAIVIET" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_SUA_BAIVIET" />
+    <FunctionImportMapping FunctionImportName="SP_SUA_DANHMUC_SANPHAM" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_SUA_DANHMUC_SANPHAM" />
+    <FunctionImportMapping FunctionImportName="SP_SUA_SANPHAM" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_SUA_SANPHAM" />
+    <FunctionImportMapping FunctionImportName="SP_SUA_VIDEO" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_SUA_VIDEO" />
+    <FunctionImportMapping FunctionImportName="SP_THEM_ANH" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_THEM_ANH" />
+    <FunctionImportMapping FunctionImportName="SP_THEM_BAIVIET" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_THEM_BAIVIET" />
+    <FunctionImportMapping FunctionImportName="SP_THEM_DANHMUC_SANPHAM" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_THEM_DANHMUC_SANPHAM" />
+    <FunctionImportMapping FunctionImportName="SP_THEM_SANPHAM" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_THEM_SANPHAM" />
+    <FunctionImportMapping FunctionImportName="SP_THEM_VIDEO" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_THEM_VIDEO" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DB_HOABANFOOD_VER2Model.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="SP_XOA_ANH" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_XOA_ANH" />
+    <FunctionImportMapping FunctionImportName="SP_XOA_BAIVIET" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_XOA_BAIVIET" />
+    <FunctionImportMapping FunctionImportName="SP_XOA_DANHMUC_SANPHAM" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_XOA_DANHMUC_SANPHAM" />
+    <FunctionImportMapping FunctionImportName="SP_XOA_SANPHAM" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_XOA_SANPHAM" />
+    <FunctionImportMapping FunctionImportName="SP_XOA_VIDEO" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_XOA_VIDEO" />
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_DMSP_DEMO" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_DMSP_DEMO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_DMSP_DEMO_Result">
+          <ScalarProperty Name="MADMSP" ColumnName="MADMSP" />
+          <ScalarProperty Name="TENDMSP" ColumnName="TENDMSP" />
+          <ScalarProperty Name="ANHDMSP" ColumnName="ANHDMSP" />
+          <ScalarProperty Name="ISDELETE" ColumnName="ISDELETE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ALL_LOAIKM_BY_ID" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_ALL_LOAIKM_BY_ID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_ALL_LOAIKM_BY_ID_Result">
+          <ScalarProperty Name="MALOAIKM" ColumnName="MALOAIKM" />
+          <ScalarProperty Name="TENLOAIKM" ColumnName="TENLOAIKM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_KHUYENMAI" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_KHUYENMAI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_KHUYENMAI_Result">
+          <ScalarProperty Name="MALOAIKM" ColumnName="MALOAIKM" />
+          <ScalarProperty Name="TENLOAIKM" ColumnName="TENLOAIKM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_CHITIETKHUYENMAI" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_CHITIETKHUYENMAI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_CHITIETKHUYENMAI_Result">
+          <ScalarProperty Name="MALOAIKM" ColumnName="MALOAIKM" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="NGAYBATDAUKM" ColumnName="NGAYBATDAUKM" />
+          <ScalarProperty Name="NGAYKETTHUCKM" ColumnName="NGAYKETTHUCKM" />
+          <ScalarProperty Name="PHANTRAM" ColumnName="PHANTRAM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_CHITIETKHUYENMAI_BY_MASP_MAKM" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_CHITIETKHUYENMAI_BY_MASP_MAKM">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_CHITIETKHUYENMAI_BY_MASP_MAKM_Result">
+          <ScalarProperty Name="MALOAIKM" ColumnName="MALOAIKM" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="NGAYBATDAUKM" ColumnName="NGAYBATDAUKM" />
+          <ScalarProperty Name="NGAYKETTHUCKM" ColumnName="NGAYKETTHUCKM" />
+          <ScalarProperty Name="PHANTRAM" ColumnName="PHANTRAM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_LOAINHANVIEN" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_LOAINHANVIEN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_LOAINHANVIEN_Result">
+          <ScalarProperty Name="MALOAINV" ColumnName="MALOAINV" />
+          <ScalarProperty Name="TENLOAINV" ColumnName="TENLOAINV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_LOAINHANVIEN_BY_ID" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_LOAINHANVIEN_BY_ID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_LOAINHANVIEN_BY_ID_Result">
+          <ScalarProperty Name="MALOAINV" ColumnName="MALOAINV" />
+          <ScalarProperty Name="TENLOAINV" ColumnName="TENLOAINV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_NHANVIEN" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_NHANVIEN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_NHANVIEN_Result">
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="TENNV" ColumnName="TENNV" />
+          <ScalarProperty Name="TENDN" ColumnName="TENDN" />
+          <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="SODT" ColumnName="SODT" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="MALOAINV" ColumnName="MALOAINV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_NHANVIEN_BY_ID" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_NHANVIEN_BY_ID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_NHANVIEN_BY_ID_Result">
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="TENNV" ColumnName="TENNV" />
+          <ScalarProperty Name="TENDN" ColumnName="TENDN" />
+          <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="SODT" ColumnName="SODT" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="MALOAINV" ColumnName="MALOAINV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_CTDH" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_CTDH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_CTDH_Result">
+          <ScalarProperty Name="MADH" ColumnName="MADH" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_DDH" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_DDH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_DDH_Result">
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="MADH" ColumnName="MADH" />
+          <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+          <ScalarProperty Name="DIACHIGIAO" ColumnName="DIACHIGIAO" />
+          <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
+          <ScalarProperty Name="NGAYGIAO" ColumnName="NGAYGIAO" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_SANPHAM_DUOC_THICH" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_SANPHAM_DUOC_THICH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_SANPHAM_DUOC_THICH_Result">
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_SP_NHANVIEN_THICH" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_SP_NHANVIEN_THICH">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_SP_NHANVIEN_THICH_Result">
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_THICHSANPHAM" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_THICHSANPHAM">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_THICHSANPHAM_Result">
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_BINHLUAN" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_BINHLUAN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_BINHLUAN_Result">
+          <ScalarProperty Name="MABL" ColumnName="MABL" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="NGAYBINHLUAN" ColumnName="NGAYBINHLUAN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GET_ALL_DANHGIA" FunctionName="DB_HOABANFOOD_VER2Model.Store.SP_GET_ALL_DANHGIA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_HOABANFOOD_VER2Model.SP_GET_ALL_DANHGIA_Result">
+          <ScalarProperty Name="MASP" ColumnName="MASP" />
+          <ScalarProperty Name="MANV" ColumnName="MANV" />
+          <ScalarProperty Name="NGAYBL" ColumnName="NGAYBL" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="SOSAO" ColumnName="SOSAO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
